@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset ="UTF-8">
+		<title>Simon</title>
+		<style>
+			body{
+				margin: 0;
+				padding: 0;
+			}
+			#table{
+				display: flex;
+				justify-content: center;
+				height: 100vh;
+				align-items: center;
+				flex-direction: column;
+			}
+			#jeu{
+				background: url('./images/simonBg.png');
+				background-size: cover;
+			}
+			#start{
+				position: absolute;
+ 			    left: 48vw;
+				top: 49vh;
+			}
+			.couleur{
+				pointer-events: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="table">
+			<h1> Simon </h1>
+			<div id="jeu">
+				<div>
+					<img class = "couleur" id ="vert" src="./images/green.png" >
+					<img class = "couleur" id = "rouge" src="./images/red.png" >
+				</div>
+				<button id= "start">GO</button>
+				<div>
+					<img class = "couleur" id = "jaune" src="./images/yellow.png" >
+					<img class = "couleur" id = "bleu" src="./images/blue.png" >
+				</div>
+			</div>
+			<h2 id= "countdown"></h2>
+			<h2>Manches gagnées:<span id ="manche"> 0</span></h2>
+		</div>
+		<script type="text/javascript" src="./jquery.min.js"></script>
+		<script type="text/javascript" src="./script.js"></script>
+	</body>
+</html>
